@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutterando_arquitetura/infrastructure/models/application_config_model.dart';
 
 //Singleton
 
@@ -13,9 +14,11 @@ class ApplicationController {
   //Evita que se possa criar uma instância do singleton
   ApplicationController._();
 
-  final themeSwitch = ValueNotifier<bool>(false);
+  final ApplicationConfigModel config = ApplicationConfigModel();
+  bool get isDark => config.themeSwitch.value;
+  ValueNotifier<bool> get themeSwitch => config.themeSwitch;
 
   changeTheme(bool value) {
-    themeSwitch.value = value;
+    config.themeSwitch.value = value;
   }
 }

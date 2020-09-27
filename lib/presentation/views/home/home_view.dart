@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterando_arquitetura/presentation/application/controllers/application_controller.dart';
-import 'package:flutterando_arquitetura/presentation/views/home/components/switch_widget.dart';
+import 'package:flutterando_arquitetura/presentation/views/home/components/home_switch_widget.dart';
 
 class HomeView extends StatefulWidget {
   HomeView({Key key, this.title}) : super(key: key);
@@ -31,7 +30,7 @@ class _HomeViewState extends State<HomeView> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Container(
-              child: SwitchWidget(),
+              child: HomeSwitchWidget(),
             ),
             Expanded(
               child: Column(
