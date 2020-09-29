@@ -1,10 +1,13 @@
+import 'package:flutter/widgets.dart';
 import 'package:flutterando_arquitetura/infrastructure/interfaces/local_storage_interface.dart';
 import 'package:flutterando_arquitetura/infrastructure/models/application_config_model.dart';
 
 class ThemeManagerViewModel {
   final ILocalStorage storage;
 
-  ThemeManagerViewModel({this.storage});
+  ThemeManagerViewModel({
+    @required this.storage,
+  });
 
   final ApplicationConfigModel config = ApplicationConfigModel();
 
