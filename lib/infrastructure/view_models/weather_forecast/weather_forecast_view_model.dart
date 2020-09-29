@@ -8,6 +8,10 @@ class WeatherForecastViewModel {
 
   WeatherForecastViewModel({@required this.repository});
   fill() async {
-    weatherForecastModel.value = await repository.getWeatherForecast();
+    try {
+      weatherForecastModel.value = await repository.getWeatherForecast();
+    } catch (e) {
+      print(e.toString());
+    }
   }
 }
